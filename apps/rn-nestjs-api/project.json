@@ -1,0 +1,24 @@
+{
+  "name": "rn-nestjs-api",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/rn-nestjs-api/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "rn-nestjs-api:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "rn-nestjs-api:build:development"
+        },
+        "production": {
+          "buildTarget": "rn-nestjs-api:build:production"
+        }
+      }
+    }
+  }
+}
