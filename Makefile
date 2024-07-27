@@ -1,5 +1,5 @@
 strapi:
-  npx nx rn-strapi:serve
+	npx nx run rn-strapi:serve
 up:
 	docker compose up --build -d
 down:
