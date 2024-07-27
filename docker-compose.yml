@@ -15,31 +15,32 @@ services:
       - POSTGRES_DB=${POSTGRES_DB}
 
   storage:
+    env_file:
+      - .env
     image: minio/minio
     container_name: rn-local-s3
     ports:
       - '9000:9000'
+      - '9001:9001'
     environment:
-      MINIO_ROOT_USER: minioadmin
-      MINIO_ROOT_PASSWORD: minioadminpassword
-    command: server /data
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
     volumes:
       - minio_data:/data
+    command: server /data --console-address ":9001"
 
   storage_mc:
+    env_file:
+      - .env
     image: minio/mc
     container_name: rn-local-s3-mc
     depends_on:
       - storage
     entrypoint: >
       /bin/sh -c "
-      until (/usr/bin/mc alias set myminio http://rn-local-s3:9000 minioadmin minioadminpassword)
+      until (/usr/bin/mc alias set rn-local-s3 http://rn-local-s3:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD})
       do sleep 2; done;
-      echo '{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Action\":\"s3:*\",\"Resource\":[\"arn:aws:s3:::*\",\"arn:aws:s3:::*/*\"]}]}' > /tmp/admin_policy.json;
-      /usr/bin/mc admin policy create myminio admin /tmp/admin_policy.json;
-      /usr/bin/mc mb myminio/mybucket;
-      /usr/bin/mc admin user add myminio newadmin newadminpassword;
-      /usr/bin/mc admin policy attach myminio admin --user=newadmin;
+      /usr/bin/mc mb rn-local-s3/${MINIO_BUCKET_NAME};
       "
 
 volumes:
