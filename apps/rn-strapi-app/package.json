@@ -9,10 +9,13 @@
     "react-native": "*",
     "expo": "*",
     "react-native-svg": "*",
-    "react-native-web": "*"
+    "react-native-web": "*",
+    "react": "18.2.0"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/rn-strapi-app && cp package-lock.json apps/rn-strapi-app",
-    "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/rn-strapi-app"
+    "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/rn-strapi-app",
+    "android": "expo run:android",
+    "ios": "expo run:ios"
   }
 }
