@@ -10,12 +10,36 @@
     "expo": "*",
     "react-native-svg": "*",
     "react-native-web": "*",
-    "react": "18.2.0"
+    "react": "18.2.0",
+    "jest-expo": "*",
+    "@nx/devkit": "*",
+    "@nx/eslint": "*",
+    "@nx/jest": "*",
+    "@nx/js": "*",
+    "@nx/react": "*",
+    "@nx/web": "*",
+    "@nx/webpack": "*",
+    "chalk": "*",
+    "enhanced-resolve": "*",
+    "fs-extra": "*",
+    "metro-resolver": "*",
+    "node-fetch": "*",
+    "tsconfig-paths": "*",
+    "tslib": "*",
+    "@expo/metro-config": "*",
+    "react-native-svg-transformer": "*",
+    "expo-router": "*",
+    "react-native-safe-area-context": "*",
+    "react-native-screens": "*",
+    "expo-linking": "*",
+    "expo-constants": "*",
+    "expo-status-bar": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/rn-app && cp yarn.lock apps/rn-app",
     "eas-build-post-install": "cd ../../ && node tools/scripts/eas-build-post-install.mjs . apps/rn-app",
     "android": "expo run:android",
     "ios": "expo run:ios"
-  }
+  },
+  "devDependencies": {}
 }

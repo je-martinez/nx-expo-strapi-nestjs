@@ -12,7 +12,7 @@ import {
 } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
 
-export const App = () => {
+export default function Page() {
   const [whatsNextYCoord, setWhatsNextYCoord] = useState<number>(0);
   const scrollViewRef = useRef<null | ScrollView>(null);
 
@@ -620,7 +620,7 @@ export const App = () => {
       </SafeAreaView>
     </>
   );
-};
+}
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: '#ffffff',
@@ -744,5 +744,3 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
-
-export default App;
