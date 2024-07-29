@@ -1,8 +1,8 @@
 import { createSliceWithImmer } from 'zustand-slices/immer';
-import { initialState } from './types';
+import { ASSETS_SLICE_NAME, initialState } from './types';
 
 const assetsSlice = createSliceWithImmer({
-  name: 'assets',
+  name: ASSETS_SLICE_NAME,
   value: initialState,
   actions: {
     updateText: (newText: string) => (state) => {
