@@ -33,7 +33,13 @@
     "react-native-screens": "*",
     "expo-linking": "*",
     "expo-constants": "*",
-    "expo-status-bar": "*"
+    "expo-status-bar": "*",
+    "zustand": "*",
+    "react-native-mmkv": "*",
+    "zustand-slices": "*",
+    "react-native-config": "*",
+    "axios": "*",
+    "immer": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/rn-app && cp yarn.lock apps/rn-app",

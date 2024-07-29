@@ -28,6 +28,7 @@
         <key>CFBundleURLSchemes</key>
         <array>
           <string>com.haunter.rnstrapiapp</string>
+          <string>com.haunter.rnstrapiapp</string>
         </array>
       </dict>
     </array>
