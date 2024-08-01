@@ -1,10 +1,9 @@
-import Svg, { Path } from 'react-native-svg';
 import { ResourceSectionId } from '../types';
-import DocIcon from './DocIcon';
 import BlogIcon from './BlogIcon';
-import YoutubeIcon from './YoutubeIcon';
-import PointerClickIcon from './PointerClickIcon';
 import CourseIcon from './CourseIcon';
+import DocIcon from './DocIcon';
+import PointerClickIcon from './PointerClickIcon';
+import YoutubeIcon from './YoutubeIcon';
 
 export default function ResourceIcon({ icon }: { icon: ResourceSectionId }) {
   return (
