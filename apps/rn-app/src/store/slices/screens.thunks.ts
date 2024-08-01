@@ -3,15 +3,15 @@ import { HomeScreenMetadata } from '../../types';
 import { api } from '../../api';
 
 const thunkActions = {
-  fetchScreenById: createAction('screens/fetchScreenById'),
+  fetchScreenByPath: createAction('screens/fetchScreenByPath'),
 };
 
-const fetchScreenById = createAsyncThunk<
+const fetchScreenByPath = createAsyncThunk<
   HomeScreenMetadata,
   string,
   { rejectValue: string }
 >(
-  thunkActions.fetchScreenById.type,
+  thunkActions.fetchScreenByPath.type,
   async (id: string, { rejectWithValue }) => {
     try {
       const { data } = await api.getScreenByPath(id);
@@ -22,4 +22,4 @@ const fetchScreenById = createAsyncThunk<
   }
 );
 
-export { fetchScreenById };
+export { fetchScreenByPath };

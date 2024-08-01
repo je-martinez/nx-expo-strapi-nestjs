@@ -2,7 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { createPersistReducer } from '../persist/utils';
 import { HomeScreenMetadata } from '../../types';
-import { fetchScreenById } from './screens.thunks';
+import { fetchScreenByPath } from './screens.thunks';
 
 const name = 'screens';
 
@@ -25,19 +25,24 @@ const screensSlice = createSlice({
     },
   },
   extraReducers: (builder) => {
-    builder.addCase(fetchScreenById.pending, (state) => {
+    builder.addCase(fetchScreenByPath.pending, (state) => {
       state.loading = true;
     });
-    builder.addCase(fetchScreenById.fulfilled, (state, action) => {
+    builder.addCase(fetchScreenByPath.fulfilled, (state, action) => {
       state.home = action.payload;
     });
-    builder.addCase(fetchScreenById.rejected, (state) => {
+    builder.addCase(fetchScreenByPath.rejected, (state) => {
       state.loading = false;
     });
+  },
+  selectors: {
+    selectHomeScreen: (state) => state.home,
+    selectLoading: (state) => state.loading,
   },
 });
 
 export const { setHomeScreen } = screensSlice.actions;
+export const { selectHomeScreen, selectLoading } = screensSlice.selectors;
 export const screensReducer = createPersistReducer(screensSlice.reducer, {
   key: name,
 });

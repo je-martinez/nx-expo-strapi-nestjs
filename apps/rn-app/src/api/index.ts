@@ -1,12 +1,12 @@
-import { AxiosInstance, create } from 'axios';
+import axios from 'axios';
 import { ScreenResponse } from './types';
 import { HomeScreenMetadata } from '../types';
 
 class RestApiService {
-  private _instance: AxiosInstance;
+  private _instance: axios.AxiosInstance;
 
   constructor() {
-    this._instance = create({
+    this._instance = axios.create({
       baseURL: 'http://localhost:3000/api',
     });
   }
