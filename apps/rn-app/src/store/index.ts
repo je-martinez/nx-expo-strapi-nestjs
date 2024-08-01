@@ -1,10 +1,10 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { persistStore } from 'redux-persist';
-import { counterReducer } from './slices/screens';
+import { screensReducer } from './slices/screens.slice';
 
 export const store = configureStore({
   reducer: combineReducers({
-    counter: counterReducer,
+    screens: screensReducer,
   }),
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

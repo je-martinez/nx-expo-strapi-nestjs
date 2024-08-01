@@ -1,3 +1,11 @@
+export enum ResourseSectionId {
+  Documentation = 'doc',
+  Blog = 'blog',
+  Youtube = 'youtube',
+  InteractiveTutorials = 'it-tutorials',
+  VideoCourses = 'courses',
+}
+
 export interface HomeScreenMetadata {
   title: string;
   resources_section: ResourcesSection;
@@ -11,7 +19,7 @@ export interface ResourcesSection {
 }
 
 export interface ResourcesSectionItem {
-  id: string;
+  id: ResourseSectionId | string;
   link: string;
   title: string;
   subtitle: string;
