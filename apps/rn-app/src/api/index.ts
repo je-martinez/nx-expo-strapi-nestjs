@@ -7,7 +7,7 @@ class RestApiService {
 
   constructor() {
     this._instance = axios.create({
-      baseURL: 'http://localhost:3000/api',
+      baseURL: 'http://localhost:1337/api',
     });
   }
 

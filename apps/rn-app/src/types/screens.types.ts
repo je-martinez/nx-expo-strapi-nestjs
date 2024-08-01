@@ -1,4 +1,4 @@
-export enum ResourseSectionId {
+export enum ResourceSectionId {
   Documentation = 'doc',
   Blog = 'blog',
   Youtube = 'youtube',
@@ -19,7 +19,7 @@ export interface ResourcesSection {
 }
 
 export interface ResourcesSectionItem {
-  id: ResourseSectionId | string;
+  id: ResourceSectionId;
   link: string;
   title: string;
   subtitle: string;
