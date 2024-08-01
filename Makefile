@@ -1,7 +1,9 @@
 strapi:
 	npx nx run rn-strapi:serve
-app-ios:
-	npx nx run-ios rn-strapi-app
+run-ios:
+	npx nx run-ios rn-app
+run-android:
+	npx nx run-android rn-app
 up:
 	docker compose up --build -d
 stop:
