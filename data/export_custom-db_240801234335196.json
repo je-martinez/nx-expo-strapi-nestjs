@@ -1,0 +1,61 @@
+{
+	"version": 2,
+	"data": {
+		"api::screen.screen": {
+			"1": {
+				"id": 1,
+				"path": "/",
+				"name": "Home",
+				"description": "It's the home page",
+				"metadata": {
+					"title": "Welcome RnApp 👋",
+					"resources_section": {
+						"items": [
+							{
+								"id": "doc",
+								"link": "https://nx.dev/getting-started/intro?utm_source=nx-project",
+								"title": "Documentation",
+								"subtitle": "Everything is in there"
+							},
+							{
+								"id": "blog",
+								"link": "https://nx.dev/blog?utm_source=nx-project",
+								"title": "Blog",
+								"subtitle": "Changelog, features & events"
+							},
+							{
+								"id": "youtube",
+								"link": "https://www.youtube.com/@NxDevtools/videos?utm_source=nx-project",
+								"title": "Youtube channel",
+								"subtitle": "Nx Show, talks & tutorials"
+							},
+							{
+								"id": "it-tutorials",
+								"link": "https://nxplaybook.com/?utm_source=nx-project",
+								"title": "Interactive tutorials",
+								"subtitle": "Create an app, step by step"
+							},
+							{
+								"id": "courses",
+								"link": "https://nxplaybook.com/?utm_source=nx-project",
+								"title": "Video courses",
+								"subtitle": "Nx custom courses"
+							}
+						],
+						"title": "Learning materials"
+					},
+					"first_line_message": "Hello there,",
+					"whats_next_section": {
+						"title": "You're up and running",
+						"button_label": "What's next?"
+					}
+				},
+				"createdAt": "2024-07-28T02:13:30.930Z",
+				"updatedAt": "2024-08-01T21:40:21.917Z",
+				"publishedAt": "2024-07-28T02:13:42.089Z",
+				"createdBy": null,
+				"updatedBy": null
+			}
+		}
+	}
+}
