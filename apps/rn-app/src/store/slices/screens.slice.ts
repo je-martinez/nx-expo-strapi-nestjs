@@ -30,6 +30,7 @@ const screensSlice = createSlice({
     });
     builder.addCase(fetchScreenByPath.fulfilled, (state, action) => {
       state.home = action.payload;
+      state.loading = false;
     });
     builder.addCase(fetchScreenByPath.rejected, (state) => {
       state.loading = false;

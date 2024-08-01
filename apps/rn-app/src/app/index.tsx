@@ -2,6 +2,7 @@
 import { usePathname } from 'expo-router';
 import React, { useEffect, useRef, useState } from 'react';
 import {
+  RefreshControl,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -18,7 +19,7 @@ export default function Screen() {
   const [whatsNextYCoord] = useState<number>(0);
   const scrollViewRef = useRef<null | ScrollView>(null);
   const path = usePathname();
-  const { homeScreen, getScreenByPath } = useScreens();
+  const { loading, homeScreen, getScreenByPath } = useScreens();
 
   useEffect(() => {
     getScreenByPath(path);
@@ -37,6 +38,12 @@ export default function Screen() {
             scrollViewRef.current = ref;
           }}
           contentInsetAdjustmentBehavior="automatic"
+          refreshControl={
+            <RefreshControl
+              refreshing={loading}
+              onRefresh={() => getScreenByPath(path)}
+            />
+          }
           style={styles.scrollView}
         >
           <View style={styles.section}>
