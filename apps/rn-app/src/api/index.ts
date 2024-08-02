@@ -1,13 +1,14 @@
 import axios from 'axios';
 import { ScreenResponse } from './types';
 import { HomeScreenMetadata } from '../types';
+import config from '../config';
 
 class RestApiService {
   private _instance: axios.AxiosInstance;
 
   constructor() {
     this._instance = axios.create({
-      baseURL: 'http://localhost:1337/api',
+      baseURL: `${config().apiURL}/api`,
     });
   }
 

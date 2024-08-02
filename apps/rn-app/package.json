@@ -42,7 +42,8 @@
     "immer": "*",
     "@reduxjs/toolkit": "*",
     "react-redux": "*",
-    "redux-persist": "*"
+    "redux-persist": "*",
+    "socket.io-client": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/rn-app && cp yarn.lock apps/rn-app",
