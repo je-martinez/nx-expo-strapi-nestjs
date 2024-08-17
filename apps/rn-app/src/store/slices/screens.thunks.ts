@@ -1,6 +1,6 @@
 import { createAction, createAsyncThunk } from '@reduxjs/toolkit';
-import { HomeScreenMetadata } from '../../types';
 import { api } from '../../api';
+import { HomeScreenMetadata } from '@h4vnt3r/shared-types';
 
 const thunkActions = {
   fetchScreenByPath: createAction('screens/fetchScreenByPath'),

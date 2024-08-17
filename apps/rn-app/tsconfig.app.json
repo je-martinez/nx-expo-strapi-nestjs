@@ -11,5 +11,12 @@
     "**/*.spec.tsx",
     "src/test-setup.ts"
   ],
-  "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "../../libs/shared-types/src/lib/responses.types.ts",
+    "../../libs/shared-types/src/lib/screens.types.ts"
+  ]
 }

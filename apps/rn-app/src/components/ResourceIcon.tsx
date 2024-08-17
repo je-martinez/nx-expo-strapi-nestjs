@@ -1,4 +1,4 @@
-import { ResourceSectionId } from '../types';
+import { ResourceSectionId } from '@h4vnt3r/shared-types';
 import BlogIcon from './BlogIcon';
 import CourseIcon from './CourseIcon';
 import DocIcon from './DocIcon';
