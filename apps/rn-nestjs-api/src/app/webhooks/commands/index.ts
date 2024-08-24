@@ -1,3 +1,3 @@
-import { OnUpdateEntryHandler } from './on-update-entry/on-update-entry.handler';
+import { OnUpdateEntryHandler } from './on-update-entry';
 
 export const CommandHandlers = [OnUpdateEntryHandler];

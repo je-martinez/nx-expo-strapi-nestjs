@@ -2,17 +2,14 @@ import { io, Socket } from 'socket.io-client';
 import config from '../config';
 import { store } from '../store';
 import { fetchScreenByPath } from '../store/slices/screens.thunks';
-
-export enum SocketEvents {
-  ON_SCREEN_UPDATE = 'on-screen-update',
-}
+import { SocketEvents } from '@h4vnt3r/shared-types';
 
 export class SocketService {
   private _client: Socket;
 
   constructor() {
     this._client = io(config().wsURL);
-    this._client.on('connect', () => this._onConnect());
+    this._client.on(SocketEvents.CONNECT, () => this._onConnect());
   }
 
   get instance() {

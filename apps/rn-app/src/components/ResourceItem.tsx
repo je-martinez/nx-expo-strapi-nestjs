@@ -1,8 +1,8 @@
 import { Linking, Text, TouchableOpacity, View } from 'react-native';
 import { styles } from '../app/styles';
-import { ResourcesSectionItem } from '../types';
 import ForwardArrowIcon from './ForwardArrowIcon';
 import ResourceIcon from './ResourceIcon';
+import { ResourcesSectionItem } from '@h4vnt3r/shared-types';
 
 interface Props {
   resource: ResourcesSectionItem;

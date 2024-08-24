@@ -1,7 +1,6 @@
 import axios from 'axios';
-import { ScreenResponse } from './types';
-import { HomeScreenMetadata } from '../types';
 import config from '../config';
+import { HomeScreenMetadata, ScreenResponse } from '@h4vnt3r/shared-types';
 
 class RestApiService {
   private _instance: axios.AxiosInstance;

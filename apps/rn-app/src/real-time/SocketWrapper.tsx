@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { SocketContext } from '.';
-import { SocketService } from './types';
+import { SocketService } from './SocketService';
 
 interface Props {
   children: React.ReactNode;

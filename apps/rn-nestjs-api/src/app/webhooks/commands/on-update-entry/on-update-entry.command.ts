@@ -1,5 +1,5 @@
-import { EntryUpdateDTO } from '../../DTOs/entry-update.DTOs';
+import { EntryUpdateDTO } from '@h4vnt3r/shared-types';
 
 export class OnUpdateEntryCommand {
-  constructor(public readonly entry: EntryUpdateDTO) {}
+  constructor(public readonly entry: EntryUpdateDTO<unknown>) {}
 }

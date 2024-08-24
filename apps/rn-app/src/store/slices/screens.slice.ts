@@ -1,8 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { createPersistReducer } from '../persist/utils';
-import { HomeScreenMetadata } from '../../types';
 import { fetchScreenByPath } from './screens.thunks';
+import { HomeScreenMetadata } from '@h4vnt3r/shared-types';
 
 const name = 'screens';
 

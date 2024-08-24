@@ -10,8 +10,8 @@ import {
   WebSocketServer,
 } from '@nestjs/websockets';
 import { Server } from 'socket.io';
-import { SocketEvents } from './constants/events.constants';
 import { Logger } from '@nestjs/common';
+import { SocketEvents } from '@h4vnt3r/shared-types';
 
 @WebSocketGateway()
 export class SocketsGateway
