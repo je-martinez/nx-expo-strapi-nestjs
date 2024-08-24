@@ -1,4 +1,6 @@
+import Config from 'react-native-config';
+
 export default () => ({
-  apiURL: 'http://localhost:1337',
-  wsURL: 'http://localhost:3001',
+  apiURL: Config.apiURL ?? 'http://localhost:1337',
+  wsURL: Config.wsURL ?? 'http://localhost:3001',
 });
