@@ -5,14 +5,27 @@ services:
     container_name: rn-database-cluster
     image: postgres:14-alpine
     ports:
-      - 9005:5432
+      - ${DATABASE_PORT}:5432
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./entrypoints/init.sql:/docker-entrypoint-initdb.d/init.sql
     environment:
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_PASSWORD=${DATABASE_USERNAME}
+      - POSTGRES_USER=${DATABASE_PASSWORD}
+      - POSTGRES_DB=${DATABASE_NAME}
+
+  caching:
+    image: memcached:latest
+    container_name: memcached
+    environment:
+      - MEMCACHED_MAX_MEMORY=64m # Maximum memory usage for items (default: 64m)
+      - MEMCACHED_MAX_CONNECTIONS=1024 # Maximum number of simultaneous connections (default: 1024)
+      - MEMCACHED_THREADS=4 # Number of threads to use (default: 4)
+      - MEMCACHED_SLAB_PAGE_SIZE=1m # Size of memory pages in slabs (default: 1m)
+      - MEMCACHED_VERBOSE=true # Enable verbose mode (default: false)
+    ports:
+      - '11211:11211'
+    restart: unless-stopped
 
   storage:
     env_file:

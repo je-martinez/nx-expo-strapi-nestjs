@@ -1,5 +1,7 @@
 strapi:
 	npx nx run rn-strapi:serve
+api:
+	npx nx run rn-nestjs-api:serve
 run-ios:
 	npx nx run-ios rn-app
 run-android:

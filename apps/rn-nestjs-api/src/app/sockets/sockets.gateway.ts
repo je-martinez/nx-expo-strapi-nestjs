@@ -25,14 +25,14 @@ export class SocketsGateway
   }
 
   handleConnection() {
-    Logger.log('User connected');
+    Logger.log('User connected', 'SocketsGateway');
   }
 
   handleDisconnect() {
-    Logger.log('User disconnected');
+    Logger.log('User disconnected', 'SocketsGateway');
   }
 
   afterInit() {
-    Logger.log('Socket is live');
+    Logger.log('Socket is live', 'SocketsGateway');
   }
 }
